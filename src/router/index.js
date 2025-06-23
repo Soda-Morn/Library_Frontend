@@ -4,6 +4,8 @@ import Borrowings from '@/views/Borrowings.vue'
 import Dashboard from '@/views/Dashboard.vue'
 import Users from '@/views/Users.vue'
 import Report from '@/views/Reports.vue' // ✅ Ad
+import Category from '@/views/Category.vue'
+import Supplier from '@/views/Supplier.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +34,16 @@ const router = createRouter({
       path: '/users',
       name: 'users',
       component: Users,
+    },
+    {
+      path: '/categories',
+      name: 'categoies',
+      component: Category,
+    },
+    {
+      path: '/supplier',
+      name: 'supplier',
+      component: Supplier,
     },
   ],
 })

@@ -31,6 +31,18 @@
         class="block px-6 py-2 hover:bg-gray-700"
         :class="{ 'bg-gray-800 font-semibold': $route.path === '/reports' }"
       >Reports</RouterLink>
+
+      <RouterLink
+        to="/categories"
+        class="block px-6 py-2 hover:bg-gray-700"
+        :class="{ 'bg-gray-800 font-semibold': $route.path === '/categories' }"
+      >Categories</RouterLink>
+
+      <RouterLink
+        to="/supplier"
+        class="block px-6 py-2 hover:bg-gray-700"
+        :class="{ 'bg-gray-800 font-semibold': $route.path === '/supplier' }"
+      >Suppliers</RouterLink>
     </nav>
   </aside>
 </template>
