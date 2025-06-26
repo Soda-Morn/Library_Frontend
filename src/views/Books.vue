@@ -2,8 +2,8 @@
   <div class="p-6 bg-gray-100 min-h-screen">
     <h2 class="text-2xl font-semibold text-gray-800 mb-6">Book Management</h2>
     
-    <!-- Add Book Button -->
-    <div class="mb-6">
+    <!-- Add Book Button (Moved to Right) -->
+    <div class="mb-6 flex justify-end">
       <button @click="showAddModal = true" class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out flex items-center justify-center">
         <span class="mr-2">➕</span> Add Book
       </button>
@@ -30,8 +30,12 @@
               <td class="px-6 py-4 whitespace-nowrap">{{ book.supplierName || 'N/A' }}</td>
               <td class="px-6 py-4 whitespace-nowrap">{{ book.categoryName || 'N/A' }}</td>
               <td class="px-6 py-4 whitespace-nowrap flex space-x-2">
-                <button @click="openEditModal(book)" class="text-indigo-600 hover:text-indigo-900"><i class="fas fa-edit"></i></button>
-                <button @click="deleteBook(book.id)" class="text-red-600 hover:text-red-900"><i class="fas fa-trash-alt"></i></button>
+                <button @click="openEditModal(book)" class="text-indigo-600 hover:text-indigo-900">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button @click="deleteBook(book.id)" class="text-red-600 hover:text-red-900">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
               </td>
             </tr>
           </tbody>
